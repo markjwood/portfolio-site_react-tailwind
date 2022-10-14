@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+	FaGithub,
+	FaTwitter,
+	FaEnvelope,
+	FaPhone,
+	FaBullhorn,
+} from 'react-icons/fa';
+// <i class="fa-solid fa-message-arrow-up-right"></i>
 
 export default function Contact() {
 	const [name, setName] = React.useState('');
@@ -24,54 +32,20 @@ export default function Contact() {
 
 	return (
 		<section id="contact" className="relative">
-			<div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-				<div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-					{/* ToDo: Replace map (with what?) */}
-					<iframe
-						width="100%"
-						height="100%"
-						title="map"
-						className="absolute inset-0"
-						frameBorder={0}
-						marginHeight={0}
-						marginWidth={0}
-						style={{ filter: 'opacity(0.7)' }}
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53010.82826483209!2d-117.61379533260582!3d33.85933504854783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcb0b9ea5d606d%3A0x8998d10fd29252f1!2sCorona%2C%20CA!5e0!3m2!1sen!2sus!4v1665607716716!5m2!1sen!2sus"
-					/>
-					<div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
-						<div className="lg:w-1/2 px-6">
-							<h2 className="title-font font-semibold text-white tracking-widest text-xs">
-								LOCATION
-							</h2>
-							<p className="mt-1">
-								Corona, CA
-								<br />
-								<span className="italic">
-									(but I work with clients worldwide)
-								</span>
-							</p>
-						</div>
-						<div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-							<h2 className="title-font font-semibold text-white tracking-widest text-xs">
-								EMAIL
-							</h2>
-							<a className="text-indigo-400 leading-relaxed">
-								mark@markjwood.com
-							</a>
-							<h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-								PHONE
-							</h2>
-							<p className="leading-relaxed">(855) 424-4552</p>
-						</div>
-					</div>
-				</div>
+			<div className="text-center mb-4 mt-10">
+				<FaBullhorn className="text-4xl inline-block mb-4" />
+				<h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-4">
+					Get In Touch
+				</h1>
+			</div>
+			<div className="container px-5 py-10 mx-auto flex flex-col gap-y-9 md:flex-row lg:gap-6">
 				<form
 					netlify
 					name="test"
 					onSubmit={handleSubmit}
-					className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+					className="lg:w-1/3 md:w-1/2 md:order-last flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
 				>
-					<h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
+					<h2 className="text-white sm:text-3xl text-2xl mb-1 font-medium title-font">
 						Hire Me
 					</h2>
 					<p className="leading-relaxed mb-2">
@@ -127,6 +101,36 @@ export default function Contact() {
 						Submit
 					</button>
 				</form>
+				<div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden lg:mr-10 p-10 relative">
+					<div className="flex flex-wrap flex-col gap-y-6 lg:flex-row lg:justify-center lg:gap-x-6 p-2 w-full lg:text-xl">
+						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
+							<a href="https://github.com/markjwood" target="_blank">
+								<FaGithub className="text-gray-50 inline mr-4 text-2xl" /> My
+								Github Projects
+							</a>
+						</div>
+						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
+							<a href="https://twitter.com/markjasonwood" target="_blank">
+								<FaTwitter className="text-gray-50 inline mr-4 text-2xl" />{' '}
+								Follow me on Twitter
+							</a>
+						</div>
+						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
+							<a href="mailto://mark@markjwood">
+								<FaEnvelope className="text-gray-50 inline mr-4 text-2xl" />{' '}
+								Email Me
+							</a>
+						</div>
+						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
+							<div>
+								<FaPhone className="text-gray-50 inline mr-4 text-2xl" /> Call
+								Me:{' '}
+								<span class="font-bold text-white ml-2">(855) 424-4552</span>
+							</div>
+						</div>
+						{/* Add something here to fill space */}
+					</div>
+				</div>
 			</div>
 		</section>
 	);
