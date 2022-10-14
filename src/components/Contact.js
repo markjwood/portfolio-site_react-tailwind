@@ -26,7 +26,15 @@ export default function Contact() {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({ 'form-name': 'mjw-contact', name, email, message }),
 		})
-			.then(() => alert('Message sent!'))
+			.then(() => {
+				// clear form inputs
+				e.target[1].value = '';
+				e.target[2].value = '';
+				e.target[3].value = '';
+
+				// success alert
+				alert('Message sent!');
+			})
 			.catch(error => alert(error));
 	}
 
