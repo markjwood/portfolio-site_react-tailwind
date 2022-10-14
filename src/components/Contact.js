@@ -105,19 +105,27 @@ export default function Contact() {
 				<div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden lg:mr-10 p-10 relative">
 					<div className="flex flex-wrap flex-col gap-y-6 lg:flex-row lg:justify-center lg:gap-x-6 p-2 w-full lg:text-xl">
 						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
-							<a href="https://github.com/markjwood" target="_blank">
+							<a
+								href="https://github.com/markjwood"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
 								<FaGithub className="text-gray-50 inline mr-4 text-2xl" /> My
 								Github Projects
 							</a>
 						</div>
 						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
-							<a href="https://twitter.com/markjasonwood" target="_blank">
+							<a
+								href="https://twitter.com/markjasonwood"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
 								<FaTwitter className="text-gray-50 inline mr-4 text-2xl" />{' '}
 								Follow me on Twitter
 							</a>
 						</div>
 						<div className="bg-gray-800 rounded flex-1 min-w-full lg:min-w-60 xl:min-w-40 h-full p-5">
-							<a href="mailto://mark@markjwood">
+							<a href="mailto://mark@markjwood.com">
 								<FaEnvelope className="text-gray-50 inline mr-4 text-2xl" />{' '}
 								Email Me
 							</a>
